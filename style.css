@@ -1,0 +1,634 @@
+/* ============================================================
+   WARM AMBER THEME — CV / Portfolio
+   Pure vanilla CSS. No frameworks.
+   ============================================================ */
+
+/* ---------- Palette ---------- */
+:root {
+  --bg: #1a1612;            /* warm dark background */
+  --card-bg: #211d18;       /* card background */
+  --card-border: #2d2620;   /* card border */
+  --text-primary: #f0e6d8;  /* warm off-white */
+  --text-secondary: #8a7a6a;/* muted warm gray */
+  --accent: #d4956a;        /* amber */
+  --tag-bg: #2a2418;        /* tag background */
+  --tag-border: #3d3328;    /* tag border */
+  --tag-text: #d4956a;      /* tag text */
+  --tag-radius: 12px;       /* pill shape */
+  --card-radius: 6px;       /* card radius */
+
+  /* Font stacks */
+  --font-serif: Georgia, serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', 'Consolas', monospace;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+b { color: var(--accent); }
+
+/* ---------- Sticky Navbar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(26, 22, 18, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.nav-inner {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.nav-logo {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+/* ---------- Layout container ---------- */
+.container {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 72px 0 100px;
+  text-align: center;
+}
+
+.hero-name {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  color: var(--text-primary);
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+  margin: 10px 0 16px;
+}
+
+.hero-bio {
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto 28px;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 11px 22px;
+  border-radius: var(--card-radius);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.btn:hover { transform: translateY(-1px); }
+
+.btn-primary {
+  background: var(--accent);
+  color: #1a1612;
+  font-weight: 600;
+}
+
+.btn-primary:hover { box-shadow: 0 4px 16px rgba(212, 149, 106, 0.35); }
+
+.btn-outline {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover { background: rgba(212, 149, 106, 0.1); }
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 42px 0;
+  scroll-margin-top: 50px;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  color: var(--text-primary);
+  font-size: 1.7rem;
+  margin: 0 0 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ---------- Carousel wrapper ---------- */
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.carousel-btn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--card-radius);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(212, 149, 106, 0.12);
+  transform: translateY(-1px);
+}
+
+/* ---------- Dots ---------- */
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--tag-border);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+
+.carousel-dot:hover { border-color: var(--accent); }
+
+.carousel-dot.active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- Carousel card ---------- */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 20 / 6;
+  background: #171310;
+  border-bottom: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-image-placeholder {
+  color: #5a4d3f;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card-body {
+  padding: 18px 20px 20px;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+
+.card-desc {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin: 0 0 14px;
+  min-height: 101px;
+}
+
+/* ---------- Tags ---------- */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  border-radius: var(--tag-radius);
+  color: var(--tag-text);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 3px 12px;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Contact ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.contact-box {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 22px 18px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.2s ease;
+}
+
+a.contact-box:hover { border-color: var(--accent); }
+
+.contact-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  word-break: break-word;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  border-top: 1px solid var(--card-border);
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+  text-align: center;
+}
+
+.footer-line {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  margin: 0;
+}
+
+/* ---------- Experience & Education Grid ---------- */
+.exp-edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.exp-edu-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.exp-edu-title {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.exp-edu-org {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.exp-edu-date {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  margin: 0 0 10px;
+}
+
+.exp-edu-desc {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin: 0 0 14px;
+  line-height: 1.7;
+}
+
+/* ---------- Credentials Row ---------- */
+.credentials-section {
+  padding-top: 80px; /* Tighter spacing after hero */
+  padding-bottom: 70px;
+}
+
+.credentials-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.credential-card {
+  flex: 1 1 260px; /* Grow equally, shrink to min 260px before wrapping */
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.credential-title {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.credential-org {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.credential-date {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  margin: 0 0 8px;
+}
+
+.credential-desc {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+/* Language-specific styling */
+.lang-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lang-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.lang-name {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.lang-level {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+
+.credential-location {
+  margin: 12px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--card-border);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Responsive: Mobile ---------- */
+@media (max-width: 640px) {
+  .credential-card { flex: 1 1 100%; }
+  .exp-edu-grid { grid-template-columns: 1fr; }
+  .container { padding: 12px 16px; }
+  .hero { padding: 48px 0 36px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 1.4rem; }
+  .nav-inner { justify-content: center; }
+  .nav-links { justify-content: center; }
+}
+
+
+/* ---------- Certificate Cards (Compact + Blurred Body + Click-to-Zoom) ---------- */
+#certificates .card {
+  cursor: zoom-in;
+}
+
+#certificates .card-image {
+  aspect-ratio: 20 / 12; /* Compact ratio, crops top/bottom via object-fit */
+}
+
+#certificates .card-image img {
+  object-fit: cover; /* Crops vertically, fills width */
+}
+
+#certificates .card-body {
+  position: absolute;
+  inset: auto 0 0 0; /* Only covers bottom portion */
+  padding: 10px 14px;
+  background: rgba(23, 19, 16, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+#certificates .card-title {
+  font-size: 0.92rem;
+  margin: 0 0 2px;
+  text-shadow: 
+    0 0 4px rgba(0,0,0,0.95),
+    1px 1px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000;
+}
+
+#certificates .card-desc {
+  font-size: 0.72rem;
+  min-height: unset;
+  margin: 0;
+  line-height: 1.4;
+  text-shadow: 
+    0 0 3px rgba(0,0,0,0.95),
+    1px 1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+#certificates .card-tags {
+  display: none;
+}
+
+/* Ensure card is positioning context for absolute body */
+#certificates carousel-item .card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---------- Lightbox Overlay ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(10, 8, 6, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  cursor: zoom-out;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: var(--card-radius);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--card-radius);
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(212, 149, 106, 0.15);
+}
+
+/* Custom elements must be block-level for proper card layout */
+carousel-item {
+  display: block;
+}

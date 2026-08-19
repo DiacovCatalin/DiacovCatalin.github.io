@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalin — Junior Backend Developer & Sysadmin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       STICKY NAVBAR
+       ============================================================ -->
+  <nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">Catalin</a>
+      <ul class="nav-links">
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section id="hero" class="hero">
+      <p class="section-label">Junior Backend Developer &amp; Sysadmin</p>
+      <h1 class="hero-name">Diacov Catalin</h1>
+      <p class="hero-bio">
+        Junior Backend developer and systems administrator with <b>2 years</b> of professional experience and a Master's in Computer Science. A simple programmer building reliable backends and keeping systems healthy.
+      </p>
+      <p class="hero-bio">
+        My focus is business logic/intelligence and workflow design - choosing the right tool for the problem, not the problem for the tool. Any application can be made good. Most aren't because the developer chose wrong.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get in touch</a>
+        <a href="#projects" class="btn btn-outline">View work</a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 1 — CREDENTIALS ROW (Experience + Education + Languages)
+         ============================================================ -->
+    <section id="credentials" class="section credentials-section">
+      <div class="credentials-row">
+        <article class="credential-card">
+          <h3 class="credential-title">Software Engineer</h3>
+          <p class="credential-org">S.A. &quot;FEE-Nord&quot;</p>
+          <p class="credential-date">May 2024 – May 2026 · 2 years</p>
+          <p class="credential-desc">Backend development and system administration in enterprise IT. Server maintenance, user support workflows, internal software systems across backend, networking, and infrastructure.</p>
+          <div class="card-tags">
+            <span class="tag">Backend</span>
+            <span class="tag">SysAdmin</span>
+            <span class="tag">Enterprise</span>
+          </div>
+        </article>
+        <article class="credential-card">
+          <h3 class="credential-title">Master's in Computer Science</h3>
+          <p class="credential-org">Alecu Russo Bălți State University</p>
+          <p class="credential-date">Conferred 10.07.2026 · EQF Level 7</p>
+          <p class="credential-desc">ICT field. Software & Applications Development. Database Administration and Web Technologies study programme.</p>
+          <div class="card-tags">
+            <span class="tag">Master's</span>
+            <span class="tag">CS</span>
+            <span class="tag">DB & Web</span>
+          </div>
+        </article>
+        <article class="credential-card credential-languages">
+          <h3 class="credential-title">Languages</h3>
+          <ul class="lang-list">
+            <li><span class="lang-name">Romanian</span> <span class="lang-level">Native</span></li>
+            <li><span class="lang-name">Russian</span> <span class="lang-level">Native</span></li>
+            <li><span class="lang-name">English</span> <span class="lang-level">B1 Read/Write · A2 Listen/Speak</span></li>
+          </ul>
+          <p class="credential-location">🇲🇩 Moldova</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 2 — PROJECTS & WORK (SINGLE STATIC CARD)
+         ============================================================ -->
+    <section id="projects" class="section">
+      <h2 class="section-title"><span class="section-num">02.</span> Projects &amp; Work</h2>
+      <carousel-item image="assets/rph.png" title="Master's Thesis — &quot;Red Phosphor&quot; Social Cataloging Site"
+        desc="Full-stack web application featuring dynamic tagging engine and ranking algorithm.<br><b>Stack:</b> Go + Fiber (backend), SvelteKit 5 + Vite (frontend), PostgreSQL (database with native array types).<br><b>Infrastructure:</b> Entirely self-hosted on personal bare-metal hardware with public white IP. Caddy reverse proxy with automatic TLS. DuckDNS for dynamic DNS resolution. Zero cloud/VPS abstraction - complete ownership of DB, backend, frontend, webserver, and DNS layers."
+        tags="Go, Fiber, SvelteKit 5, Vite, PostgreSQL, Caddy, DuckDNS, Bare-Metal, Self-Hosted, Full-Stack"></carousel-item>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3 — DIGITAL SKILLS
+         ============================================================ -->
+    <section id="skills" class="section">
+      <h2 class="section-title"><span class="section-num">03.</span> Digital Skills</h2>
+      <content-carousel>
+        <carousel-item image="assets/stack.png" title="Primary Tech Stack"
+          desc="Go with Fiber framework and Air live-reload launcher. TypeScript with SvelteKit 5 and Vite. These are my main tools - but - the <b>stack serves the problem</b>, not the other way around.<br>Any language or framework is a week of reading away if the project demands it."
+          tags="Go, Fiber, Air, TypeScript, SvelteKit 5, Vite"></carousel-item>
+        <carousel-item image="assets/postgre.png" title="Database Architecture"
+          desc="Database design and backend systems built on <b>PostgreSQL</b>. Schema design, query optimization, and data modeling leveraging PostgreSQL's native array types for structured multi-value storage.<br>REST API development and authentication systems."
+          tags="PostgreSQL, Array Types, REST API, Auth, Backend"></carousel-item>
+        <carousel-item image="assets/infra.png" title="Infrastructure Pipeline"
+          desc="I have experience with complete deployment pipeline - database, backend, frontend, webserver, DNS.<br>Everything was <b>Self-hosted</b> on my personal hardware - with public IP - without any cloud abstraction layers."
+          tags="Bare Metal, Caddy, Self-Host, DNS, Public IP"></carousel-item>
+        <carousel-item image="assets/hardening.png" title="Networking & Cybersecurity"
+          desc="Network architecture design and hardening. Whitelist firewall configuration, secure environment engineering. Post-incident security elevation after detecting external access to local services.<br>I got handy in cybersec the moment it became <b>my problem</b>."
+          tags="Networking, Whitelist Firewall, CyberSec, Hardening, Threat Analysis"></carousel-item>
+        <carousel-item image="assets/crack.png" title="Reverse Engineering"
+          desc="Practical cracking experience - my maximal crackme done was <b>level 3.7</b>, WinRAR licensing bypass, Unity DLC unlockers. Vulnerability analysis and binary inspection for educational purposes only."
+          tags="x64dbg, Radare2, Ghidra, dnSpy, DiE, Crackmes.one"></carousel-item>
+        <carousel-item image="assets/regex.png" title="RegEx & Data Processing"
+          desc="Day-to-day RegEx usage for pattern matching, data extraction, and text processing pipelines. My confidence is born from continuous practical application of RegEx for <b>2 years</b>."
+          tags="Regex, Pattern Matching, Data Extraction, Text Processing"></carousel-item>
+        <carousel-item image="assets/macro.png" title="Macro & Desktop Automation"
+          desc="Sikulix for visual macro automation and AutoHotkey v2 for system-level scripting. Workflow optimization through desktop automation for <b>repetitive tasks elimination</b>."
+          tags="Sikulix, AHK2, Automation, Workflow Optimization"></carousel-item>
+        <carousel-item image="assets/edit.png" title="Creative & Artistic Tools"
+          desc="<b>Modded Paint.NET</b> for image editing, Friction for vector animation, FruityLoops for music production. Audacity for sound editing."
+          tags="Paint.NET, Friction, FruityLoops, Vector Animation, Music"></carousel-item>
+        <carousel-item image="assets/gradio.png" title="Diffusion & Image Generation"
+          desc="Early adopter who started working with AI-Generated content during the <b>NovelAI leak era</b>, before LoRA existed - with hypernetworks styles instead.<br>Currently using ComfyUI as exclusive pipeline. Models: Flux, Stable Diffusion (NooB), Qwen-Image, Z-Image."
+          tags="ComfyUI, Flux, Stable Diffusion, Qwen-Image, Hypernetworks, NAI, Z-Image"></carousel-item>
+        <carousel-item image="assets/localllm.png" title="LLM & AI Tooling"
+          desc="Local model deployment since <b>Llama 3 era</b>. Was using Kobold + SillyTavern pipelines and then added/explored newer agentic frameworks. LLM workflow design, tool-call architecture, prompt engineering."
+          tags="Local LLM, Kobold, SillyTavern, Agentic AI, Prompt Engineering"></carousel-item>
+        <carousel-item image="assets/agent.png" title="LLM Agent Tooling"
+          desc="Hands-on experience with multiple <b>agentic coding tools</b> like:<br>Kilocode, Claude Code, Aider, Pi (current primary), Zed-Agent, OpenCode."
+          tags="Kilocode, Claude Code, Aider, Pi, Zed-Agent, OpenCode"></carousel-item>
+        <carousel-item image="assets/arena.png" title="LLM Model Experience"
+          desc="Extensive usage across <b>open-weight</b> and closed models.<br>Open: GLM (primary driver), DeepSeek (secondary), Minimax, InclusionAI (Ling/Ring), Qwen, Kimi, MiMo, LongCat, Nemotron, StepFun, Gemma, Llama (legacy), Mistral (legacy).<br>Closed: Gemini, Claude."
+          tags="GLM, DeepSeek, Gemini, Claude, Qwen, Kimi, Minimax, Local + Cloud LLM"></carousel-item>
+      </content-carousel>
+    </section>
+
+    <!-- ============================================================
+         SECTION 4 — PROFILE (Work/Education removed)
+         ============================================================ -->
+    <section id="profile" class="section">
+      <h2 class="section-title"><span class="section-num">04.</span> Profile</h2>
+      <content-carousel>
+        <carousel-item image="assets/work.png" title="Work Philosophy"
+          desc="Focus on business process, logic, and workflow design over raw syntax. The right tool selection matters more than knowing a specific language. Any language is learnable - understanding the underlying problem and choosing the appropriate solution is the real skill."
+          tags="Business Logic, Architecture, Tool Selection, Workflow Design"></carousel-item>
+        <carousel-item image="assets/softskill.png" title="Soft Skills"
+          desc="Patient and methodical problem-solver. Empathetic and cooperative team member. Assertive communicator with direct, no-bullshit approach. Protective of project integrity and team wellbeing. Pragmatic and realistic in decision-making. Optimistic about outcomes but grounded in constraints."
+          tags="Patience, Empathy, Assertiveness, Collaboration, Pragmatism, Reliability"></carousel-item>
+        <carousel-item image="assets/security.png" title="Security Posture"
+          desc="Exclusively OSS software environment. Firefox with NoScript. Whitelist firewall. No proprietary dependencies in personal workflow. Actively hostile toward unoptimized software. Any application can be made good with the right environment and developer choices."
+          tags="OSS Only, Firefox, NoScript, Whitelist Firewall, Anti-bloat"></carousel-item>
+      </content-carousel>
+    </section>
+
+    <!-- ============================================================
+         SECTION 5 — CERTIFICATES
+         ============================================================ -->
+    <section id="certificates" class="section">
+      <h2 class="section-title"><span class="section-num">05.</span> Training, Awards &amp; Certificates</h2>
+      <content-carousel>
+        <carousel-item image="cert/ccna.webp"
+          title="CCNA: Introduction to Network"
+          desc="Issued by Cisco — 2026-03-13" tags="Certification"></carousel-item>
+        <carousel-item image="cert/digit.webp"
+          title="Technovator: &quot;Digital Transformation Academy&quot;"
+          desc="Issued by Technovator — 24-09-13<br>48 hours crash course" tags="Certification"></carousel-item>
+        <carousel-item image="cert/testing.webp"
+          title="Endava: Testing Course"
+          desc="Issued by Endava — December 2023<br>7-week programme" tags="Certification"></carousel-item>
+        <carousel-item image="cert/bsides.webp"
+          title="BSides: Participation"
+          desc="Issued by BSides — 2025-10-31" tags="Certification"></carousel-item>
+        <carousel-item image="cert/cybercor.webp"
+          title="Cybercor: Attendance"
+          desc="Issued by Cybercor — 2025-10-03" tags="Certification"></carousel-item>
+        <carousel-item image="cert/energy.webp"
+          title="ESCI&IESPM: Attendance"
+          desc="Issued by ESCI, RickSight, IESPM and ICI — Mid-2025" tags="Certification"></carousel-item>
+        <carousel-item image="cert/powerbi.webp"
+          title="PowerBI for data analysis in the energy sector: Attendance"
+          desc="Issued by UNDP — 2025-07-4" tags="Certification"></carousel-item>
+        <carousel-item image="cert/aspiratii.webp"
+          title="Gold Medal &quot;Aspiratii Informatice&quot; 7th Edition"
+          desc="Issued by &quot;Alecu Russo&quot; State University — 2019-03-23" tags="Certification"></carousel-item>
+      </content-carousel>
+    </section>
+
+    <!-- ============================================================
+         SECTION 6 — CONTACT
+         ============================================================ -->
+    <section id="contact" class="section">
+      <h2 class="section-title"><span class="section-num">06.</span> Contact</h2>
+      <div class="contact-grid">
+        <a href="mailto:dcatalin4ik@gmail.com" class="contact-box">
+          <span class="contact-label">EMAIL</span>
+          <span class="contact-value">Dcatalin4ik@gmail.com</span>
+        </a>
+        <a href="https://github.com/DiacovCatalin" target="_blank" rel="noopener" class="contact-box">
+          <span class="contact-label">GITHUB</span>
+          <span class="contact-value">Github.com/DiacovCatalin</span>
+        </a>
+        <a href="https://wikipedia.org/wiki/Moldova" target="_blank" rel="noopener" class="contact-box">
+          <span class="contact-label">LOCATION</span>
+          <span class="contact-value">Moldova 🇲🇩</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <p class="footer-line">Built with vanilla HTML/CSS/JS — no framework needed</p>
+    <p class="footer-line">&copy; <span id="year"></span> Catalin. All rights reserved.</p>
+  </footer>
+
+  <!-- Lightbox overlay for certificate zoom (MUST be before main.js) -->
+  <div class="lightbox" id="cert-lightbox" role="dialog" aria-modal="true" aria-label="Certificate preview">
+    <button class="lightbox-close" aria-label="Close preview">&times;</button>
+    <img src="" alt="">
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
